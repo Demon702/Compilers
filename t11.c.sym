@@ -1,0 +1,24 @@
+Program:
+
+Global Declarations:
+   Procedure: fibonacci_, Return Type:INT
+   Local Declarartions
+   Name: ans_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: a1_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: a2_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: b_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: res_ Type: INT Entity Type: VAR (No offset assigned yet)
+Program:
+
+Global Declarations:
+   Procedure: fibonacci_, Return Type:INT
+   Local Declarartions
+   Name: ans_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: a1_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8
+   Name: a2_ Type: INT Entity Type: VAR Start Offset: 8 End Offset: 12
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: b_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: res_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8

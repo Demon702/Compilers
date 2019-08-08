@@ -1,0 +1,178 @@
+Program:
+   Procedure: isPrime_, Return Type: INT
+	n_  Type:INT
+
+         IF : 
+         CONDITION (
+            Condition: LT
+               LHS (Name : n_)
+               RHS (Num : 2))
+         THEN (
+            
+         RETURN Num : 0
+)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (Num : 1)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 2)
+         WHILE : 
+         CONDITION (
+            Condition: LT
+               LHS (Name : i_)
+               RHS (Name : n_))
+         BODY (
+            
+         Asgn:
+            LHS (Name : j_)
+            RHS (Name : i_)
+            
+         Asgn:
+            LHS (Name : prod_)
+            RHS (
+            Arith: MULT
+               LHS (Name : i_)
+               RHS (Name : j_))
+            
+         WHILE : 
+         CONDITION (
+            Condition: LE
+               LHS (Name : prod_)
+               RHS (Name : n_))
+         BODY (
+            
+         IF : 
+         CONDITION (
+            Condition: EQ
+               LHS (Name : prod_)
+               RHS (Name : n_))
+         THEN (
+            
+         Asgn:
+            LHS (Name : ans_)
+            RHS (Num : 0))
+            
+         Asgn:
+            LHS (Name : j_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : j_)
+               RHS (Num : 1))
+            
+         Asgn:
+            LHS (Name : prod_)
+            RHS (
+            Arith: MULT
+               LHS (Name : i_)
+               RHS (Name : j_)))
+            
+         Asgn:
+            LHS (Name : i_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : i_)
+               RHS (Num : 1)))
+         RETURN Name : ans_
+   Procedure: main, Return Type: VOID
+
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 23)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 97)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 101)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 1001)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 123)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 129)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 41)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 49)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 51)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 53)
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+         FN CALL: isPrime_(
+            Name : i_))
+         Print :
+               (Name : ans_)

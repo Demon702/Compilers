@@ -1,0 +1,24 @@
+Program:
+
+Global Declarations:
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: a_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: b_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: c_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: d_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: product_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: p_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: result_Type : Double Entity Type: VAR (No offset assigned yet)
+Program:
+
+Global Declarations:
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: a_Type : Double Entity Type: VAR Start Offset: 0 End Offset: 8
+   Name: b_Type : Double Entity Type: VAR Start Offset: 8 End Offset: 16
+   Name: c_Type : Double Entity Type: VAR Start Offset: 16 End Offset: 24
+   Name: d_Type : Double Entity Type: VAR Start Offset: 24 End Offset: 32
+   Name: product_Type : Double Entity Type: VAR Start Offset: 32 End Offset: 40
+   Name: p_Type : Double Entity Type: VAR Start Offset: 40 End Offset: 48
+   Name: result_Type : Double Entity Type: VAR Start Offset: 48 End Offset: 56

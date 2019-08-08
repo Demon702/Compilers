@@ -1,0 +1,81 @@
+Program:
+   Procedure: main, Return Type: VOID
+
+         Asgn:
+            LHS (Name : i1_)
+            RHS (Num : 5)
+         Asgn:
+            LHS (Name : i2_)
+            RHS (Num : 3)
+         Asgn:
+            LHS (Name : i3_)
+            RHS (Num : 1)
+         Asgn:
+            LHS (Name : f1_)
+            RHS (Num : 0.50)
+         Asgn:
+            LHS (Name : val_)
+            RHS (Num : 10)
+         IF : 
+         CONDITION (
+            Condition: AND
+               LHS (
+            Condition: EQ
+               LHS (Name : i1_)
+               RHS (Num : 5))
+               RHS (
+            Condition: OR
+               LHS (
+            Condition: EQ
+               LHS (Name : i2_)
+               RHS (Num : 3))
+               RHS (
+            Condition: EQ
+               LHS (Name : i3_)
+               RHS (Num : 0))))
+         THEN (
+            
+         Asgn:
+            LHS (Name : val_)
+            RHS (Num : 20))
+         ELSE (
+         IF : 
+         CONDITION (
+            Condition: EQ
+               LHS (Name : i3_)
+               RHS (Num : 1))
+         THEN (
+            
+         Asgn:
+            LHS (Name : val_)
+            RHS (Num : 30)))
+         Print :
+               (Name : val_)
+         IF : 
+         CONDITION (
+            Condition: LE
+               LHS (Name : f1_)
+               RHS (Num : 0.40))
+         THEN (
+            
+         Asgn:
+            LHS (Name : val_)
+            RHS (Num : 40))
+         ELSE (
+         IF : 
+         CONDITION (
+            Condition: NE
+               LHS (Name : f1_)
+               RHS (Num : 0.50))
+         THEN (
+            
+         Asgn:
+            LHS (Name : val_)
+            RHS (Num : 50))
+         ELSE (
+            
+         Asgn:
+            LHS (Name : val_)
+            RHS (Num : 60)))
+         Print :
+               (Name : val_)

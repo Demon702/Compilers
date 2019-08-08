@@ -1,0 +1,31 @@
+  Procedure: main
+  Intermediate Code Statements
+	iLoad:    	v0 <- 80
+	store:    	a_ <- v0
+	iLoad:    	v0 <- 25
+	store:    	b_ <- v0
+	iLoad:    	v0 <- 20
+	store:    	c_ <- v0
+	iLoad:    	v0 <- 15
+	store:    	d_ <- v0
+	load:    	v0 <- a_
+	load:    	t0 <- a_
+	mul:    	t1 <- v0 , t0
+	load:    	v0 <- b_
+	load:    	t0 <- c_
+	mul:    	t2 <- v0 , t0
+	add:    	v0 <- t1 , t2
+	load:    	t0 <- d_
+	sub:    	t1 <- v0 , t0
+	iLoad:    	v0 <- 2
+	add:    	t0 <- t1 , v0
+	store:    	prime_product_ <- t0
+	iLoad:    	v0 <- 97
+	store:    	p_ <- v0
+	load:    	v0 <- prime_product_
+	load:    	t0 <- p_
+	div:    	t1 <- v0 , t0
+	store:    	result_ <- t1
+	iLoad:    	v0 <- 1
+	load:    	a0 <- result_
+	print

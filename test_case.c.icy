@@ -1,0 +1,44 @@
+  Procedure: func1_
+  Intermediate Code Statements
+	load:    	v0 <- a_
+	move:    	v1 <- v0
+	jump epilogue_func1_
+  Procedure: func2_
+  Intermediate Code Statements
+  Procedure: func4_
+  Intermediate Code Statements
+	load:    	v0 <- a_
+	load:    	t0 <- b_
+	add:    	t1 <- v0 , t0
+	move:    	v1 <- t1
+	jump epilogue_func4_
+	iLoad:    	v0 <- 4
+	store:    	i1_ <- v0
+  Procedure: main
+  Intermediate Code Statements
+	iLoad:    	v0 <- 6
+	store:    	a_ <- v0
+	sub:    	sp <- sp , 4
+	jal func1_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	iLoad:    	v0 <- 0
+	store:    	i1_ <- v0
+	iLoad:    	v0 <- 1
+	store:    	i2_ <- v0
+	iLoad:    	v0 <- 3
+	store:    	i3_ <- v0
+	load:    	v0 <- i2_
+	store:    	b_ <- v0
+	load:    	v0 <- i1_
+	store:    	a_ <- v0
+	sub:    	sp <- sp , 8
+	jal func4_
+	add:    	sp <- sp , 8
+	move:    	v0 <- v1
+	store:    	i2_ <- v0
+	iLoad:    	v0 <- 4
+	store:    	i3_ <- v0
+  Procedure: xyz_
+  Intermediate Code Statements
+	jump epilogue_xyz_

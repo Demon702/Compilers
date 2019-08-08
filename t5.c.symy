@@ -1,0 +1,28 @@
+Program:
+
+Global Declarations:
+   Name: i1_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: i2_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: f1_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: f2_Type : Double Entity Type: VAR (No offset assigned yet)
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: f1_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: f2_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: i1_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: i2_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: result_ Type: INT Entity Type: VAR (No offset assigned yet)
+Program:
+
+Global Declarations:
+   Name: i1_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: i2_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8
+   Name: f1_Type : Double Entity Type: VAR Start Offset: 8 End Offset: 16
+   Name: f2_Type : Double Entity Type: VAR Start Offset: 16 End Offset: 24
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: f1_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: f2_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8
+   Name: i1_Type : Double Entity Type: VAR Start Offset: 8 End Offset: 16
+   Name: i2_Type : Double Entity Type: VAR Start Offset: 16 End Offset: 24
+   Name: result_ Type: INT Entity Type: VAR Start Offset: 24 End Offset: 28

@@ -1,0 +1,64 @@
+Program:
+   Procedure: fibonacci_, Return Type: INT
+	a_  Type:INT
+
+         IF : 
+         CONDITION (
+            Condition: OR
+               LHS (
+            Condition: EQ
+               LHS (Name : a_)
+               RHS (Num : 0))
+               RHS (
+            Condition: EQ
+               LHS (Name : a_)
+               RHS (Num : 1)))
+         THEN (
+            
+         Asgn:
+            LHS (Name : ans_)
+            RHS (Num : 1)
+            
+         RETURN Name : ans_
+)
+         Asgn:
+            LHS (Name : a1_)
+            RHS (
+            Arith: MINUS
+               LHS (Name : a_)
+               RHS (Num : 1))
+         Asgn:
+            LHS (Name : a1_)
+            RHS (
+         FN CALL: fibonacci_(
+            Name : a1_))
+         Asgn:
+            LHS (Name : a2_)
+            RHS (
+            Arith: MINUS
+               LHS (Name : a_)
+               RHS (Num : 2))
+         Asgn:
+            LHS (Name : a2_)
+            RHS (
+         FN CALL: fibonacci_(
+            Name : a2_))
+         Asgn:
+            LHS (Name : ans_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : a1_)
+               RHS (Name : a2_))
+         RETURN Name : ans_
+   Procedure: main, Return Type: VOID
+
+         Asgn:
+            LHS (Name : b_)
+            RHS (Num : 4)
+         Asgn:
+            LHS (Name : res_)
+            RHS (
+         FN CALL: fibonacci_(
+            Name : b_))
+         Print :
+               (Name : res_)

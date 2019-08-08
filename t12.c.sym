@@ -1,0 +1,26 @@
+Program:
+
+Global Declarations:
+   Procedure: isPrime_, Return Type:INT
+   Local Declarartions
+   Name: ans_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: i_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: j_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: prod_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: i_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: ans_ Type: INT Entity Type: VAR (No offset assigned yet)
+Program:
+
+Global Declarations:
+   Procedure: isPrime_, Return Type:INT
+   Local Declarartions
+   Name: ans_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: i_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8
+   Name: j_ Type: INT Entity Type: VAR Start Offset: 8 End Offset: 12
+   Name: prod_ Type: INT Entity Type: VAR Start Offset: 12 End Offset: 16
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: i_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: ans_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8

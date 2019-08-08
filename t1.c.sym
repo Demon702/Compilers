@@ -1,0 +1,24 @@
+Program:
+
+Global Declarations:
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: a_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: b_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: c_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: d_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: prime_product_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: p_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: result_ Type: INT Entity Type: VAR (No offset assigned yet)
+Program:
+
+Global Declarations:
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: a_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: b_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8
+   Name: c_ Type: INT Entity Type: VAR Start Offset: 8 End Offset: 12
+   Name: d_ Type: INT Entity Type: VAR Start Offset: 12 End Offset: 16
+   Name: prime_product_ Type: INT Entity Type: VAR Start Offset: 16 End Offset: 20
+   Name: p_ Type: INT Entity Type: VAR Start Offset: 20 End Offset: 24
+   Name: result_ Type: INT Entity Type: VAR Start Offset: 24 End Offset: 28

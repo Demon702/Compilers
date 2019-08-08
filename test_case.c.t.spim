@@ -1,0 +1,148 @@
+
+	.data
+i1_:	.word 0
+i2_:	.word 0
+
+	.text 			# The .text assembler directive indicates
+	.globl func1_		# The following is the code (as oppose to data)
+func1_:				# .globl makes main know to the 
+				# outside of the program.
+# Prologue begins 
+	sw $ra, 0($sp)		# Save the return address
+	sw $fp, -4($sp)		# Save the frame pointer
+	sub $fp, $sp, 8		# Update the frame pointer
+
+	sub $sp, $sp, 8		# Make space for the locals
+# Prologue ends
+
+	lw $v0, 12($fp)
+	move $v1, $v0
+	j epilogue_func1_
+
+# Epilogue Begins
+epilogue_func1_:
+	add $sp, $sp, 8
+	lw $fp, -4($sp)  
+	lw $ra, 0($sp)   
+	jr        $31		# Jump back to the called procedure
+# Epilogue Ends
+
+
+	.text 			# The .text assembler directive indicates
+	.globl func2_		# The following is the code (as oppose to data)
+func2_:				# .globl makes main know to the 
+				# outside of the program.
+# Prologue begins 
+	sw $ra, 0($sp)		# Save the return address
+	sw $fp, -4($sp)		# Save the frame pointer
+	sub $fp, $sp, 8		# Update the frame pointer
+
+	sub $sp, $sp, 8		# Make space for the locals
+# Prologue ends
+
+
+# Epilogue Begins
+epilogue_func2_:
+	add $sp, $sp, 8
+	lw $fp, -4($sp)  
+	lw $ra, 0($sp)   
+	jr        $31		# Jump back to the called procedure
+# Epilogue Ends
+
+
+	.text 			# The .text assembler directive indicates
+	.globl func4_		# The following is the code (as oppose to data)
+func4_:				# .globl makes main know to the 
+				# outside of the program.
+# Prologue begins 
+	sw $ra, 0($sp)		# Save the return address
+	sw $fp, -4($sp)		# Save the frame pointer
+	sub $fp, $sp, 8		# Update the frame pointer
+
+	sub $sp, $sp, 8		# Make space for the locals
+# Prologue ends
+
+	lw $v0, 12($fp)
+	lw $t0, 16($fp)
+	add $t1, $v0, $t0
+	move $v1, $t1
+	j epilogue_func4_
+	li $v0, 4
+	sw $v0, i1_
+
+# Epilogue Begins
+epilogue_func4_:
+	add $sp, $sp, 8
+	lw $fp, -4($sp)  
+	lw $ra, 0($sp)   
+	jr        $31		# Jump back to the called procedure
+# Epilogue Ends
+
+
+	.text 			# The .text assembler directive indicates
+	.globl main		# The following is the code (as oppose to data)
+main:				# .globl makes main know to the 
+				# outside of the program.
+# Prologue begins 
+	sw $ra, 0($sp)		# Save the return address
+	sw $fp, -4($sp)		# Save the frame pointer
+	sub $fp, $sp, 8		# Update the frame pointer
+
+	sub $sp, $sp, 12		# Make space for the locals
+# Prologue ends
+
+	li $v0, 6
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal func1_
+	add $sp, $sp, 4
+	move $v0, $v1
+	li $v0, 0
+	sw $v0, i1_
+	li $v0, 1
+	sw $v0, i2_
+	li $v0, 3
+	sw $v0, 0($fp)
+	lw $v0, i2_
+	sw $v0, 0($sp)
+	lw $v0, i1_
+	sw $v0, -4($sp)
+	sub $sp, $sp, 8
+	jal func4_
+	add $sp, $sp, 8
+	move $v0, $v1
+	sw $v0, i2_
+	li $v0, 4
+	sw $v0, 0($fp)
+
+# Epilogue Begins
+epilogue_main:
+	add $sp, $sp, 12
+	lw $fp, -4($sp)  
+	lw $ra, 0($sp)   
+	jr        $31		# Jump back to the called procedure
+# Epilogue Ends
+
+
+	.text 			# The .text assembler directive indicates
+	.globl xyz_		# The following is the code (as oppose to data)
+xyz_:				# .globl makes main know to the 
+				# outside of the program.
+# Prologue begins 
+	sw $ra, 0($sp)		# Save the return address
+	sw $fp, -4($sp)		# Save the frame pointer
+	sub $fp, $sp, 8		# Update the frame pointer
+
+	sub $sp, $sp, 8		# Make space for the locals
+# Prologue ends
+
+	j epilogue_xyz_
+
+# Epilogue Begins
+epilogue_xyz_:
+	add $sp, $sp, 8
+	lw $fp, -4($sp)  
+	lw $ra, 0($sp)   
+	jr        $31		# Jump back to the called procedure
+# Epilogue Ends
+

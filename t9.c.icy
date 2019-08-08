@@ -1,0 +1,66 @@
+  Procedure: func1_
+  Intermediate Code Statements
+	load:    	v0 <- i1_
+	load:    	t0 <- i2_
+	add:    	t1 <- v0 , t0
+	store:    	i1_ <- t1
+	iLoad:    	v0 <- 3
+	load.d:    	f12 <- f1_
+	print
+	load:    	v0 <- i1_
+	move:    	v1 <- v0
+	jump epilogue_func1_
+	iLoad:    	v0 <- 3
+	load.d:    	f12 <- f1_
+	print
+  Procedure: func2_
+  Intermediate Code Statements
+	load:    	v0 <- i1_
+	load:    	t0 <- i2_
+	sub:    	t1 <- v0 , t0
+	store:    	i1_ <- t1
+	iLoad:    	v0 <- 3
+	load.d:    	f12 <- f1_
+	print
+	load:    	v0 <- i1_
+	move:    	v1 <- v0
+	jump epilogue_func2_
+	iLoad:    	v0 <- 3
+	load.d:    	f12 <- f1_
+	print
+  Procedure: main
+  Intermediate Code Statements
+	iLoad:    	v0 <- 7
+	store:    	a_ <- v0
+	iLoad:    	v0 <- 3
+	store:    	b_ <- v0
+	iLoad.d:    	f2 <- 3.50
+	store.d:    	c_ <- f2
+	load.d:    	f2 <- c_
+	store.d:    	f1_ <- f2
+	load:    	v0 <- b_
+	store:    	i2_ <- v0
+	load:    	v0 <- a_
+	store:    	i1_ <- v0
+	sub:    	sp <- sp , 16
+	jal func1_
+	add:    	sp <- sp , 16
+	move:    	v0 <- v1
+	store:    	x_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- x_
+	print
+	load.d:    	f2 <- c_
+	store.d:    	f1_ <- f2
+	load:    	v0 <- b_
+	store:    	i2_ <- v0
+	load:    	v0 <- a_
+	store:    	i1_ <- v0
+	sub:    	sp <- sp , 16
+	jal func2_
+	add:    	sp <- sp , 16
+	move:    	v0 <- v1
+	store:    	x_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- x_
+	print

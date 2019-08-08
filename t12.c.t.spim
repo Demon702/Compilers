@@ -1,0 +1,224 @@
+
+	.text 			# The .text assembler directive indicates
+	.globl isPrime_		# The following is the code (as oppose to data)
+isPrime_:				# .globl makes main know to the 
+				# outside of the program.
+# Prologue begins 
+	sw $ra, 0($sp)		# Save the return address
+	sw $fp, -4($sp)		# Save the frame pointer
+	sub $fp, $sp, 8		# Update the frame pointer
+
+	sub $sp, $sp, 24		# Make space for the locals
+# Prologue ends
+
+	lw $v0, 12($fp)
+	li $t0, 2
+	slt $t1, $v0, $t0
+	beq $t1, $zero, label0 
+	li $v0, 0
+	move $v1, $v0
+	j epilogue_isPrime_
+
+label0:    	
+	li $v0, 1
+	sw $v0, 0($fp)
+	li $v0, 2
+	sw $v0, -4($fp)
+	j label2
+
+label1:    	
+	lw $v0, -4($fp)
+	sw $v0, -8($fp)
+	lw $v0, -4($fp)
+	lw $t0, -8($fp)
+	mul $t1, $v0, $t0
+	sw $t1, -12($fp)
+	j label4
+
+label3:    	
+	lw $v0, -12($fp)
+	lw $t0, 12($fp)
+	seq $t1, $v0, $t0
+	beq $t1, $zero, label5 
+	li $v0, 0
+	sw $v0, 0($fp)
+
+label5:    	
+	lw $v0, -8($fp)
+	li $t0, 1
+	add $t1, $v0, $t0
+	sw $t1, -8($fp)
+	lw $v0, -4($fp)
+	lw $t0, -8($fp)
+	mul $t1, $v0, $t0
+	sw $t1, -12($fp)
+
+label4:    	
+	lw $v0, -12($fp)
+	lw $t0, 12($fp)
+	sle $t1, $v0, $t0
+	bne $t1, $zero, label3 
+	lw $v0, -4($fp)
+	li $t0, 1
+	add $t1, $v0, $t0
+	sw $t1, -4($fp)
+
+label2:    	
+	lw $v0, -4($fp)
+	lw $t0, 12($fp)
+	slt $t1, $v0, $t0
+	bne $t1, $zero, label1 
+	lw $v0, 0($fp)
+	move $v1, $v0
+	j epilogue_isPrime_
+
+# Epilogue Begins
+epilogue_isPrime_:
+	add $sp, $sp, 24
+	lw $fp, -4($sp)  
+	lw $ra, 0($sp)   
+	jr        $31		# Jump back to the called procedure
+# Epilogue Ends
+
+
+	.text 			# The .text assembler directive indicates
+	.globl main		# The following is the code (as oppose to data)
+main:				# .globl makes main know to the 
+				# outside of the program.
+# Prologue begins 
+	sw $ra, 0($sp)		# Save the return address
+	sw $fp, -4($sp)		# Save the frame pointer
+	sub $fp, $sp, 8		# Update the frame pointer
+
+	sub $sp, $sp, 16		# Make space for the locals
+# Prologue ends
+
+	li $v0, 23
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 97
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 101
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 1001
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 123
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 129
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 41
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 49
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 51
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+	li $v0, 53
+	sw $v0, 0($fp)
+	lw $v0, 0($fp)
+	sw $v0, 0($sp)
+	sub $sp, $sp, 4
+	jal isPrime_
+	add $sp, $sp, 4
+	move $v0, $v1
+	sw $v0, -4($fp)
+	li $v0, 1
+	lw $a0, -4($fp)
+	syscall
+
+# Epilogue Begins
+epilogue_main:
+	add $sp, $sp, 16
+	lw $fp, -4($sp)  
+	lw $ra, 0($sp)   
+	jr        $31		# Jump back to the called procedure
+# Epilogue Ends
+

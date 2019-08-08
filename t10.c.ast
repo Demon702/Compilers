@@ -1,0 +1,62 @@
+Program:
+   Procedure: func1_, Return Type: INT
+	i1_  Type:INT
+	i2_  Type:INT
+	f1_  Type:FLOAT
+
+         Asgn:
+            LHS (Name : i1_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : i1_)
+               RHS (Name : i2_))
+         Print :
+               (Name : f1_)
+         RETURN Name : i1_
+
+         Print :
+               (Name : f1_)   Procedure: func2_, Return Type: INT
+	i1_  Type:INT
+	i2_  Type:INT
+	f1_  Type:FLOAT
+
+         Asgn:
+            LHS (Name : i1_)
+            RHS (
+            Arith: MINUS
+               LHS (Name : i1_)
+               RHS (Name : i2_))
+         Print :
+               (Name : f1_)
+         Asgn:
+            LHS (Name : x_)
+            RHS (
+         FN CALL: func1_(
+            Name : a_
+            Name : b_
+            Name : c_))
+         Print :
+               (Name : x_)
+         RETURN Name : i1_
+
+         Print :
+               (Name : f1_)   Procedure: main, Return Type: VOID
+
+         Asgn:
+            LHS (Name : a_)
+            RHS (Num : 7)
+         Asgn:
+            LHS (Name : b_)
+            RHS (Num : 3)
+         Asgn:
+            LHS (Name : c_)
+            RHS (Num : 3.50)
+         Asgn:
+            LHS (Name : x_)
+            RHS (
+         FN CALL: func2_(
+            Name : a_
+            Name : b_
+            Name : c_))
+         Print :
+               (Name : x_)

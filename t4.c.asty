@@ -1,0 +1,82 @@
+Program:
+   Procedure: main, Return Type: VOID
+
+         Asgn:
+            LHS (Name : f_)
+            RHS (Num : 1.00)
+         Asgn:
+            LHS (Name : counter_)
+            RHS (Num : 1)
+         Asgn:
+            LHS (Name : sumf_)
+            RHS (Num : 0.00)
+         WHILE : 
+         CONDITION (
+            Condition: LE
+               LHS (Name : counter_)
+               RHS (Num : 11))
+         BODY (
+            
+         Asgn:
+            LHS (Name : sumf_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : sumf_)
+               RHS (Name : f_))
+            
+         Asgn:
+            LHS (Name : f_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : f_)
+               RHS (Num : 2.00))
+            
+         Asgn:
+            LHS (Name : counter_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : counter_)
+               RHS (Num : 1)))
+         Print :
+               (Name : sumf_)
+         Asgn:
+            LHS (Name : i_)
+            RHS (Num : 1)
+         Asgn:
+            LHS (Name : counter_)
+            RHS (Num : 1)
+         Asgn:
+            LHS (Name : sum_)
+            RHS (Num : 0)
+         WHILE : 
+         CONDITION (
+            Condition: LT
+               LHS (Name : counter_)
+               RHS (Num : 11))
+         BODY (
+            
+         Asgn:
+            LHS (Name : sum_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : sum_)
+               RHS (
+            Arith: MULT
+               LHS (Name : i_)
+               RHS (Name : i_)))
+            
+         Asgn:
+            LHS (Name : i_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : i_)
+               RHS (Num : 1))
+            
+         Asgn:
+            LHS (Name : counter_)
+            RHS (
+            Arith: PLUS
+               LHS (Name : counter_)
+               RHS (Num : 1)))
+         Print :
+               (Name : sum_)

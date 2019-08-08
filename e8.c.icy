@@ -1,0 +1,23 @@
+  Procedure: func1_
+  Intermediate Code Statements
+	load:    	v0 <- b_
+	move:    	v1 <- v0
+	jump epilogue_func1_
+  Procedure: main
+  Intermediate Code Statements
+	iLoad:    	v0 <- 1
+	store:    	a_ <- v0
+	iLoad:    	v0 <- 2
+	store:    	b_ <- v0
+	load:    	v0 <- b_
+	store:    	b_ <- v0
+	load:    	v0 <- a_
+	store:    	a_ <- v0
+	sub:    	sp <- sp , 8
+	jal func1_
+	add:    	sp <- sp , 8
+	move:    	v0 <- v1
+	store:    	x_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- x_
+	print

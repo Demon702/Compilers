@@ -1,0 +1,7 @@
+  Procedure: main
+  Intermediate Code Statements
+	iLoad:    	v0 <- 1
+	store:    	result_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- result_
+	print

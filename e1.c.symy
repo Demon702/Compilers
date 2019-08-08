@@ -1,0 +1,14 @@
+Program:
+
+Global Declarations:
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: b_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: b_ Type: INT Entity Type: VAR (No offset assigned yet)
+Program:
+
+Global Declarations:
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+   Name: b_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: b_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8

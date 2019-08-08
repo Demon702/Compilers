@@ -1,0 +1,64 @@
+  Procedure: main
+  Intermediate Code Statements
+	iLoad.d:    	f2 <- 1.00
+	store.d:    	f_ <- f2
+	iLoad:    	v0 <- 1
+	store:    	counter_ <- v0
+	iLoad.d:    	f2 <- 0.00
+	store.d:    	sumf_ <- f2
+	goto label3
+
+label2:    	
+	load.d:    	f2 <- sumf_
+	load.d:    	f4 <- f_
+	add.d:    	f6 <- f2 , f4
+	store.d:    	sumf_ <- f6
+	load.d:    	f2 <- f_
+	iLoad.d:    	f4 <- 2.00
+	add.d:    	f6 <- f2 , f4
+	store.d:    	f_ <- f6
+	load:    	v0 <- counter_
+	iLoad:    	t0 <- 1
+	add:    	t2 <- v0 , t0
+	store:    	counter_ <- t2
+
+label3:    	
+	load:    	v0 <- counter_
+	iLoad:    	t0 <- 11
+	sle:    	t1 <- v0 , t0
+	goto label2
+	iLoad:    	v0 <- 3
+	load.d:    	f12 <- sumf_
+	print
+	iLoad:    	v0 <- 1
+	store:    	i_ <- v0
+	iLoad:    	v0 <- 1
+	store:    	counter_ <- v0
+	iLoad:    	v0 <- 0
+	store:    	sum_ <- v0
+	goto label5
+
+label4:    	
+	load:    	v0 <- sum_
+	load:    	t0 <- i_
+	load:    	t2 <- i_
+	mul:    	t3 <- t0 , t2
+	add:    	t0 <- v0 , t3
+	store:    	sum_ <- t0
+	load:    	v0 <- i_
+	iLoad:    	t0 <- 1
+	add:    	t2 <- v0 , t0
+	store:    	i_ <- t2
+	load:    	v0 <- counter_
+	iLoad:    	t0 <- 1
+	add:    	t2 <- v0 , t0
+	store:    	counter_ <- t2
+
+label5:    	
+	load:    	v0 <- counter_
+	iLoad:    	t0 <- 11
+	slt:    	t1 <- v0 , t0
+	goto label4
+	iLoad:    	v0 <- 1
+	load:    	a0 <- sum_
+	print

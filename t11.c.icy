@@ -1,0 +1,60 @@
+  Procedure: fibonacci_
+  Intermediate Code Statements
+	load:    	v0 <- a_
+	iLoad:    	t0 <- 0
+	seq:    	t1 <- v0 , t0
+	load:    	v0 <- a_
+	iLoad:    	t0 <- 1
+	seq:    	t2 <- v0 , t0
+	or:    	v0 <- t1 , t2
+	beq:    	v0 , zero : goto label0
+	iLoad:    	t0 <- 1
+	store:    	ans_ <- t0
+	load:    	t0 <- ans_
+	move:    	v1 <- t0
+	jump epilogue_fibonacci_
+
+label0:    	
+	load:    	v0 <- a_
+	iLoad:    	t0 <- 1
+	sub:    	t1 <- v0 , t0
+	store:    	a1_ <- t1
+	load:    	v0 <- a1_
+	store:    	a_ <- v0
+	sub:    	sp <- sp , 4
+	jal fibonacci_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	a1_ <- v0
+	load:    	v0 <- a_
+	iLoad:    	t0 <- 2
+	sub:    	t1 <- v0 , t0
+	store:    	a2_ <- t1
+	load:    	v0 <- a2_
+	store:    	a_ <- v0
+	sub:    	sp <- sp , 4
+	jal fibonacci_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	a2_ <- v0
+	load:    	v0 <- a1_
+	load:    	t0 <- a2_
+	add:    	t1 <- v0 , t0
+	store:    	ans_ <- t1
+	load:    	v0 <- ans_
+	move:    	v1 <- v0
+	jump epilogue_fibonacci_
+  Procedure: main
+  Intermediate Code Statements
+	iLoad:    	v0 <- 4
+	store:    	b_ <- v0
+	load:    	v0 <- b_
+	store:    	a_ <- v0
+	sub:    	sp <- sp , 4
+	jal fibonacci_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	res_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- res_
+	print

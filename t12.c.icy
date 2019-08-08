@@ -1,0 +1,184 @@
+  Procedure: isPrime_
+  Intermediate Code Statements
+	load:    	v0 <- n_
+	iLoad:    	t0 <- 2
+	slt:    	t1 <- v0 , t0
+	beq:    	t1 , zero : goto label0
+	iLoad:    	v0 <- 0
+	move:    	v1 <- v0
+	jump epilogue_isPrime_
+
+label0:    	
+	iLoad:    	v0 <- 1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 2
+	store:    	i_ <- v0
+	jump label2
+
+label1:    	
+	load:    	v0 <- i_
+	store:    	j_ <- v0
+	load:    	v0 <- i_
+	load:    	t0 <- j_
+	mul:    	t1 <- v0 , t0
+	store:    	prod_ <- t1
+	jump label4
+
+label3:    	
+	load:    	v0 <- prod_
+	load:    	t0 <- n_
+	seq:    	t1 <- v0 , t0
+	beq:    	t1 , zero : goto label5
+	iLoad:    	v0 <- 0
+	store:    	ans_ <- v0
+
+label5:    	
+	load:    	v0 <- j_
+	iLoad:    	t0 <- 1
+	add:    	t1 <- v0 , t0
+	store:    	j_ <- t1
+	load:    	v0 <- i_
+	load:    	t0 <- j_
+	mul:    	t1 <- v0 , t0
+	store:    	prod_ <- t1
+
+label4:    	
+	load:    	v0 <- prod_
+	load:    	t0 <- n_
+	sle:    	t1 <- v0 , t0
+	bne:    	t1 , zero : goto label3
+	load:    	v0 <- i_
+	iLoad:    	t0 <- 1
+	add:    	t1 <- v0 , t0
+	store:    	i_ <- t1
+
+label2:    	
+	load:    	v0 <- i_
+	load:    	t0 <- n_
+	slt:    	t1 <- v0 , t0
+	bne:    	t1 , zero : goto label1
+	load:    	v0 <- ans_
+	move:    	v1 <- v0
+	jump epilogue_isPrime_
+  Procedure: main
+  Intermediate Code Statements
+	iLoad:    	v0 <- 23
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 97
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 101
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 1001
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 123
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 129
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 41
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 49
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 51
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print
+	iLoad:    	v0 <- 53
+	store:    	i_ <- v0
+	load:    	v0 <- i_
+	store:    	n_ <- v0
+	sub:    	sp <- sp , 4
+	jal isPrime_
+	add:    	sp <- sp , 4
+	move:    	v0 <- v1
+	store:    	ans_ <- v0
+	iLoad:    	v0 <- 1
+	load:    	a0 <- ans_
+	print

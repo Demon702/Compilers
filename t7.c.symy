@@ -1,0 +1,22 @@
+Program:
+
+Global Declarations:
+   Name: a_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: b_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Name: c_Type : Double Entity Type: VAR (No offset assigned yet)
+   Name: x_ Type: INT Entity Type: VAR (No offset assigned yet)
+   Procedure: func1_, Return Type:INT
+   Local Declarartions
+   Procedure: main, Return Type:VOID
+   Local Declarartions
+Program:
+
+Global Declarations:
+   Name: a_ Type: INT Entity Type: VAR Start Offset: 0 End Offset: 4
+   Name: b_ Type: INT Entity Type: VAR Start Offset: 4 End Offset: 8
+   Name: c_Type : Double Entity Type: VAR Start Offset: 8 End Offset: 16
+   Name: x_ Type: INT Entity Type: VAR Start Offset: 16 End Offset: 20
+   Procedure: func1_, Return Type:INT
+   Local Declarartions
+   Procedure: main, Return Type:VOID
+   Local Declarartions

@@ -1,0 +1,22 @@
+Program:
+   Procedure: func1_, Return Type: INT
+	a_  Type:FLOAT
+	b_  Type:INT
+
+         RETURN Name : b_
+   Procedure: main, Return Type: VOID
+
+         Asgn:
+            LHS (Name : a_)
+            RHS (Num : 1)
+         Asgn:
+            LHS (Name : b_)
+            RHS (Num : 2)
+         Asgn:
+            LHS (Name : x_)
+            RHS (
+         FN CALL: func1_(
+            Name : a_
+            Name : b_))
+         Print :
+               (Name : x_)
